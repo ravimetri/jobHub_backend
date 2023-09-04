@@ -1,11 +1,19 @@
 const router = require("express").Router();
+const {
+  verifyToken,
+  verifyTokenAndAuthorization,
+} = require("../midware/verifyTken");
 const bookmarkController = require("../controller/bookmarkController");
 
 //Create Bookmarks
-router.post("/", bookmarkController.createBookmark);
+router.post(
+  "/",
+  verifyTokenAndAuthorization,
+  bookmarkController.createBookmark
+);
 
 //Delete Bookmarks
-router.delete("/:id", bookmarkController.deleteBookmark);
+router.delete("/:id", verifyToken, bookmarkController.deleteBookmark);
 
 //Get Bookmarks
 router.get("/:userId", bookmarkController.getBookmarks);

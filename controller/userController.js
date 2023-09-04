@@ -11,7 +11,7 @@ module.exports = {
     }
     try {
       const updateUser = await User.findByIdAndUpdate(
-        req.params.id,
+        req.user.id,
         {
           $set: req.body,
         },
@@ -28,7 +28,7 @@ module.exports = {
   //delete user function
   deleteUser: async (req, res) => {
     try {
-      await User.findOneAndDelete(req.params.id);
+      await User.findOneAndDelete(req.user.id);
       res.status(200).json("Account Successfully Deleted");
     } catch (error) {
       res.status(500).json(error);
@@ -38,7 +38,7 @@ module.exports = {
   //delete user function
   getUser: async (req, res) => {
     try {
-      const user = await User.findById(req.params.id);
+      const user = await User.findById(req.user.id);
       const { password, __v, createdAt, updatedAt, ...userData } = user._doc;
       res.status(200).json(userData);
     } catch (error) {
