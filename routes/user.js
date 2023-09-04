@@ -8,13 +8,13 @@ const {
 
 // Update User
 
-router.put("/", verifyAndAuthorization, userController.updateUser);
+router.put("/:id", verifyAndAuthorization, userController.updateUser);
 
 //delete user
-router.delete("/", verifyAndAuthorization, userController.deleteUser);
+router.delete("/:id", verifyAndAuthorization, userController.deleteUser);
 
 //get user by ID
-router.get("/", verifyAndAuthorization, userController.getUser);
+router.get("/:id", verifyAndAuthorization, userController.getUser);
 
 //get All user
 router.get("/", verifyAndAdmin, userController.getAllUser);

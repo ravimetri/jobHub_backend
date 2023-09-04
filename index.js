@@ -23,7 +23,7 @@ app.use(express.json());
 app.use("/api/", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/jobs", jobRoute);
-app.use("/api/bookmarks", bookMarkRoute);
+app.use("/api/bookmarks/", bookMarkRoute);
 // app.listen("/api", authRoute);
 // localhost:5001/api/register
 
