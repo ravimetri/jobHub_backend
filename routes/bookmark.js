@@ -2,7 +2,7 @@ const router = require("express").Router();
 const {
   verifyToken,
   verifyTokenAndAuthorization,
-} = require("../midware/verifyTken");
+} = require("../midware/verifyToken");
 const bookmarkController = require("../controller/bookmarkController");
 
 //Create Bookmarks
