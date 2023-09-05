@@ -8,7 +8,7 @@ const {
 
 // Update User
 
-router.put("/", verifyAndAuthorization, userController.updateUser);
+router.put("/:id", verifyAndAuthorization, userController.updateUser);
 
 //delete user
 router.delete("/:id", verifyAndAuthorization, userController.deleteUser);
