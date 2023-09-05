@@ -11,10 +11,10 @@ const {
 router.put("/", verifyAndAuthorization, userController.updateUser);
 
 //delete user
-router.delete("/:id", verifyAndAuthorization, userController.deleteUser);
+router.delete("/", verifyAndAuthorization, userController.deleteUser);
 
 //get user by ID
-router.get("/:id", verifyAndAuthorization, userController.getUser);
+router.get("/", verifyAndAuthorization, userController.getUser);
 
 //get All user
 router.get("/", verifyAndAdmin, userController.getAllUser);
