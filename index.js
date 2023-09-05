@@ -21,7 +21,8 @@ mongoose
 // app.get("/", (req, res) => res.send("Welcome Ravi!"));
 app.use(express.json());
 app.use("/api/", authRoute);
-app.use("/api/users", userRoute);
+// app.use("/api/users", userRoute);
+app.use("/api/users/", userRoute);
 app.use("/api/jobs", jobRoute);
 app.use("/api/bookmarks/", bookMarkRoute);
 // app.listen("/api", authRoute);
