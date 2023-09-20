@@ -10,7 +10,11 @@ const bookmarkController = require("../controller/bookmarkController");
 router.post("/", verifyAndAuthorization, bookmarkController.createBookmark);
 
 //Delete Bookmarks
-router.delete("/:id", verifyToken, bookmarkController.deleteBookmark);
+router.delete(
+  "/:id",
+  verifyAndAuthorization,
+  bookmarkController.deleteBookmark
+);
 
 //Get Bookmarks
 router.get("/", verifyAndAuthorization, bookmarkController.getBookmarks);
