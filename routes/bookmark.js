@@ -11,7 +11,7 @@ router.post("/", verifyAndAuthorization, bookmarkController.createBookmark);
 
 //Delete Bookmarks
 router.delete("/:id", verifyToken, bookmarkController.deleteBookmark);
-xs;
+re;
 //Get Bookmarks
 router.get("/", verifyAndAuthorization, bookmarkController.getBookmarks);
 
