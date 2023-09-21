@@ -12,7 +12,7 @@ const UserSChema = new mongoose.Schema(
     skills: { type: Array, default: false },
     profile: {
       type: String,
-      required: true,
+      required: false,
       default:
         "https://www.online-image-editor.com/styles/2019/images/power_girl_editor.png",
     },
