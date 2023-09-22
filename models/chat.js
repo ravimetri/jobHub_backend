@@ -4,7 +4,7 @@ const chatSchema = mogoose.Schema(
   {
     chatName: { type: String, trim: true },
     idGroupChat: { type: Boolean, default: false },
-    user: [
+    users: [
       {
         type: mogoose.Schema.Types.ObjectId,
         ref: "User",
