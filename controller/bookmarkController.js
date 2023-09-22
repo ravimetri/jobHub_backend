@@ -15,7 +15,7 @@ module.exports = {
 
       const savedBookmark = await newBook.save();
       const { __v, updatedAt, ...newBookmarkInfo } = savedBookmark._doc;
-
+      console.log(savedBookmark);
       res.status(200).json(newBookmarkInfo);
     } catch (error) {
       res.status(500).json(error);
