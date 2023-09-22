@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const BookMarkSChema = new mongoose.Schema(
   {
-    job: { type: mongoose.Schema.Types.Mixed, ref: "Job" },
+    job: { type: mongoose.Schema.Types.DocumentArray, ref: "Job" },
 
     // title: { type: mongoose.Schema.Types.ObjectId, ref: "Job" },
     // location: { type: mongoose.Schema.Types.ObjectId, ref: "Job" },
