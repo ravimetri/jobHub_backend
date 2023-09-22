@@ -2,7 +2,7 @@ const mogoose = require("mongoose");
 
 const chatSchema = mogoose.Schema(
   {
-    chatNaMe: { type: String, trim: true },
+    chatName: { type: String, trim: true },
     idGroupChat: { type: Boolean, default: false },
     user: [
       {
@@ -10,15 +10,15 @@ const chatSchema = mogoose.Schema(
         ref: "User",
       },
     ],
-    latesMessage: {
+    latestMessage: {
       type: mogoose.Schema.ObjectId,
-      ref: "User",
+      ref: "Message",
     },
     groupAdmin: {
       type: mogoose.Schema.Types.ObjectId,
       ref: "User",
     },
-   },
+  },
   { timestamps: true }
 );
 
