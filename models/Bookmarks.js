@@ -2,13 +2,11 @@ const mongoose = require("mongoose");
 
 const BookMarkSChema = new mongoose.Schema(
   {
-    job: [
-      {
-        id: { type: mongoose.Schema.Types.ObjectId, ref: "Job" },
+    job: {
+      id: { type: mongoose.Schema.Types.ObjectId, ref: "Job" },
 
-        title: { type: mongoose.Schema.Types.ObjectId, ref: "Job" },
-      },
-    ],
+      title: { type: mongoose.Schema.Types.ObjectId, ref: "Job" },
+    },
     // title: [{ type: mongoose.Schema.Types.ObjectId, ref: "Job" }],
     // location: { type: mongoose.Schema.Types.ObjectId, ref: "Job" },
     // company: { type: mongoose.Schema.Types.ObjectId, ref: "Job" },
