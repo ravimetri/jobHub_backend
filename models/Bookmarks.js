@@ -6,7 +6,7 @@ const BookMarkSChema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: "Job",
     },
-    title: [{ type: mongoose.Schema.Types.ObjectId, ref: "Job" }],
+    title: [{ type: mongoose.Schema.Types.title, ref: "Job" }],
     // location: { type: mongoose.Schema.Types.ObjectId, ref: "Job" },
     // company: { type: mongoose.Schema.Types.ObjectId, ref: "Job" },
     // salary: { type: mongoose.Schema.Types.ObjectId, ref: "Job" },
