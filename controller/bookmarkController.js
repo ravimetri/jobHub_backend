@@ -1,4 +1,4 @@
-const BookMark = require("../models/Bookmarks");
+const Bookmark = require("../models/Bookmarks");
 const Job = require("../models/Job");
 
 module.exports = {
