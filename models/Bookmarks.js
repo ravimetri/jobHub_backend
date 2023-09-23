@@ -5,7 +5,6 @@ const BookMarkSChema = new mongoose.Schema(
     job: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Job",
-      title: { type: String, required: true },
     },
 
     userId: { type: String, required: true },

@@ -3,7 +3,7 @@ const Job = require("../models/Job");
 
 module.exports = {
   createBookmark: async (req, res) => {
-    const jobID = req.body.job;
+    const jobID = req.body.Job;
 
     try {
       const job = await Job.findById(jobID);
