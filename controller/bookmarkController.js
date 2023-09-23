@@ -9,7 +9,7 @@ module.exports = {
       const job = await Job.findById(jobID);
 
       if (!job) {
-        return res.status(404).json({ error: "Job Not ound" });
+        return res.status(404).json({ error: "Job Not Found" });
       }
       const newBook = new Bookmark({ job: job, userId: req.user.id });
 
