@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const BookMarkSChema = new mongoose.Schema(
   {
     job: {
-      type: mongoose.Schema.Types.model.ObjectId,
+      type: mongoose.Schema.Type.ObjectId,
       ref: "Job",
 
       // ref: "Job",
