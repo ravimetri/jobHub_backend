@@ -3,8 +3,11 @@ const mongoose = require("mongoose");
 const BookMarkSChema = new mongoose.Schema(
   {
     job: {
-      type: mongoose.Schema.Types.ObjectId,
+      type: Map,
+      of: String,
       ref: "Job",
+      // type: mongoose.Schema.Types.ObjectId,
+      // ref: "Job",
 
       // ref: "Job",
     },
