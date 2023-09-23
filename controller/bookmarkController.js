@@ -14,7 +14,7 @@ module.exports = {
       const newBook = new Bookmark({
         job: job,
         userId: req.user.id,
-        title: req.body.title,
+        title: job.title,
       });
 
       const savedBookmark = await newBook.save();
