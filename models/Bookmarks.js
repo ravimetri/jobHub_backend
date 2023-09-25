@@ -12,4 +12,4 @@ const BookMarkSChema = new mongoose.Schema(
 );
 
 module.exports =
-  mongoose.model.BookMarks || mongoose.model("Bookmarks", BookMarkSChema);
+  mongoose.model.BookMarks || mongoose.model("Bookmark", BookMarkSChema);
