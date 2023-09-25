@@ -11,7 +11,7 @@ module.exports = {
       if (!job) {
         return res.status(404).json({ error: "Job Not Found" });
       }
-      const newBook = new Job({ job: job, userId: req.user.id });
+      const newBook = new Bookmark({ job: job, userId: req.user.id });
 
       const savedBookmark = await newBook.save();
       const { __v, updatedAt, ...newBookmarkInfo } = savedBookmark._doc;
