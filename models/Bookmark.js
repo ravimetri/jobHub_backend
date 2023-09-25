@@ -4,7 +4,7 @@ const BookMarkSChema = new mongoose.Schema(
   {
     job: [
       {
-        type: mongoose.Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.Array,
         ref: "Job",
       },
     ],
