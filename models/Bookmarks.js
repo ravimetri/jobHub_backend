@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const BookMarkSChema = new mongoose.Schema(
   {
     job: {
-      type: mongoose.Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.Array,
       ref: "Job",
     },
     userId: { type: String, required: true },
@@ -11,5 +11,4 @@ const BookMarkSChema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports =
-  mongoose.model.BookMarks || mongoose.model("Bookmark", BookMarkSChema);
+module.exports = mongoose.model("Bookmark", BookMarkSChema);
