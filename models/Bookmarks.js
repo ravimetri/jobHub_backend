@@ -11,5 +11,4 @@ const BookMarkSChema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports =
-  mongoose.model.Bookmarks || mongoose.model("Bookmarks", BookMarkSChema);
+module.exports = mongoose.model("Bookmarks", BookMarkSChema);
