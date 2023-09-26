@@ -1,9 +1,9 @@
-const { Schema } = require("mongoose");
+const mongoose = require("mongoose");
 
 const BookMarkSChema = new mongoose.Schema(
   {
     job: {
-      type: Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: "Job",
     },
 
