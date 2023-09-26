@@ -8,7 +8,7 @@ const BookMarkSChema = new mongoose.Schema(
         ref: "Job",
       },
     ],
-w
+
     userId: { type: String, required: true },
   },
   { timestamps: true }
