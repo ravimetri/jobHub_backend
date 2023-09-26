@@ -1,6 +1,4 @@
-// import * as mongoose from "mongoose";
-const { Schema, model } = require("mongoose");
-const mongoose = require("mongoose");
+const { Schema } = require("mongoose");
 
 const BookMarkSChema = new mongoose.Schema(
   {
@@ -14,5 +12,4 @@ const BookMarkSChema = new mongoose.Schema(
   { timestamps: true }
 );
 
-// module.exports = mongoose.model("Bookmark", BookMarkSChema);
-module.exports = model.call(require("mongoose"), "Bookmark", BookMarkSChema);
+module.exports = mongoose.model("Bookmark", BookMarkSChema);
