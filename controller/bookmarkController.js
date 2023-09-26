@@ -1,5 +1,3 @@
-import * as mongoose from "mongoose";
-import { Schema, model } from "mongoose";
 const Bookmark = require("../models/Bookmark");
 const Job = require("../models/Job");
 

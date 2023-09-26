@@ -1,4 +1,6 @@
-const mongoose = require("mongoose");
+import * as mongoose from "mongoose";
+import { Schema, model } from "mongoose";
+// const mongoose = require("mongoose");
 
 const BookMarkSChema = new mongoose.Schema(
   {
