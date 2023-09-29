@@ -18,7 +18,7 @@ module.exports = {
       ],
     })
       .populate("users", "-password")
-      .populate("latestMessage");
+      .populate("");
 
     isChat = await User.populate(isChat, {
       path: "latestMessage.sender",
