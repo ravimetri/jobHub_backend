@@ -49,7 +49,7 @@ module.exports = {
 
   getChat: async (req, res) => {
     try {
-      Chat.find({ users: { $elemMatch: { $eq: req.users.id } } })
+      Chat.find({ users: { $elemMatch: { $eq: req.user.id } } })
         .populate("users", "-password")
         .populate("groupAdmin", "-password")
         .populate("latestMessage")
